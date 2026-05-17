@@ -1,12 +1,76 @@
+:root {
+    --background: #dedad8;
+    --card: #e6e6e6;
+    --border: #a7a7a7;
+    --middle: #8f8d8d;
+    --text: #212121;
+    --accent: #c3776d;
+    --selection: #d6d2d2;
+}
+
 body {
-    background-color: #dedad8;
+    background-color: var(--background);
     font-family: Helvetica, sans-serif;
     color: #2b2b2b;
+    margin: auto;
+    padding: 1rem;
+    max-width: 100ch;
+    grid-template-rows: auto 1fr auto;
+    display: grid;
+    font-size: 22px;
+    color: var(--text);
+}
 
+
+h1, h2, h3 {
+    color: var(-accent);
 }
-h1{
-    color: #c3776d;
+
+a {
+    color: var(--accent);
 }
-a{
-    color: #717274;
+
+main .reel {
+    padding-top: 40px;
+    column-gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    margin: auto;
+}
+
+main .reel h3 {
+    font-size: 32px;
+    margin-top: 5px;
+}
+
+main .reel p {
+    margin-bottom: 0;
+}
+
+main time {
+    color: var(--middle);
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    main .reel {grid-template-columns: 1fr;}
+    main .reel img {padding-top: 1rem}
+}
+
+main .youtube-embed {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    padding-top: 56.25%;
+}
+
+main img {
+    width: 100%;
+}
+
+main iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
 }
